@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "ion" class = "com.example.demo.Furnizor">
+        <property name = "nume" value = "Ion"/>
+        <property name = "oras" value = "Braila"/>
+        <property name = "stare" value = "10"/>
+    </bean>
+    <bean id = "radu" class = "com.example.demo.Furnizor">
+        <property name = "nume" value = "Radu"/>
+        <property name = "oras" value = "Bucuresti"/>
+        <property name = "stare" value = "20"/>
+    </bean>
+</beans>
