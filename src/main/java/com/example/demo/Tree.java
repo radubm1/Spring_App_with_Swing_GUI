@@ -7,16 +7,25 @@ import java.util.List;
 public class Tree {
     JFrame f;
 
-    Tree(List<Furnizor> fz) {
+    Tree(List<Livrare> liv) {
         f = new JFrame();
-        DefaultMutableTreeNode style = new DefaultMutableTreeNode("Furnizori");
-        for(Furnizor b : fz) {
-            DefaultMutableTreeNode nume = new DefaultMutableTreeNode(b.getNume());
-            style.add(nume);
-            DefaultMutableTreeNode oras = new DefaultMutableTreeNode(b.getOras());
-            DefaultMutableTreeNode stare = new DefaultMutableTreeNode(b.getStare());
-            nume.add(oras);
-            nume.add(stare);
+        DefaultMutableTreeNode style = new DefaultMutableTreeNode("Livrari");
+        for(Livrare l : liv) {
+            DefaultMutableTreeNode cant = new DefaultMutableTreeNode(l.getCant());
+            style.add(cant);
+            DefaultMutableTreeNode furnizor = new DefaultMutableTreeNode(l.getFz().getNume());
+            DefaultMutableTreeNode compon = new DefaultMutableTreeNode(l.getCmp().getDenum());
+            cant.add(compon);
+            DefaultMutableTreeNode um = new DefaultMutableTreeNode(l.getCmp().getUm());
+            DefaultMutableTreeNode culoare = new DefaultMutableTreeNode(l.getCmp().getCuloare());
+            compon.add(um);
+            compon.add(culoare);
+            cant.add(furnizor);
+            DefaultMutableTreeNode oras = new DefaultMutableTreeNode(l.getFz().getOras());
+            DefaultMutableTreeNode stare = new DefaultMutableTreeNode(l.getFz().getStare());
+            furnizor.add(oras);
+            furnizor.add(stare);
+
         }
         JTree jt = new JTree(style);
         f.add(jt);

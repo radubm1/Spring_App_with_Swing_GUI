@@ -20,11 +20,12 @@ public class DemoApplication {
 
         liv = Arrays.asList((Livrare)context.getBean("liv1"), (Livrare)context.getBean("liv2"));
 
+        int i=100;
         for (Livrare l : liv)
-            System.out.println(l.getFz().getNume()+"|"+l.getCmp().getDenum());
+            l.setCant(i++);
 
-        System.out.println(FlipTableConverters.fromIterable(liv, Livrare.class));
-        //new Tree(fz);
+        //System.out.println(FlipTableConverters.fromIterable(liv, Livrare.class));
+        new Tree(liv);
 
     }
 

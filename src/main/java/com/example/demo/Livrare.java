@@ -20,4 +20,12 @@ public class Livrare {
     public void setCmp(Componenta cmp) {
         this.cmp = cmp;
     }
+
+    public int getCant() {
+        return cant;
+    }
+
+    public void setCant(int cant) {
+        this.cant = cant;
+    }
 }
