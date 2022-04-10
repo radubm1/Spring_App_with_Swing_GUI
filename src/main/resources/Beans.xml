@@ -12,4 +12,22 @@
         <property name = "oras" value = "Bucuresti"/>
         <property name = "stare" value = "20"/>
     </bean>
+    <bean id = "surub" class = "com.example.demo.Componenta">
+        <property name = "denum" value = "suruburi"/>
+        <property name = "culoare" value = "verde"/>
+        <property name = "um" value = "buc"/>
+    </bean>
+    <bean id = "piulita" class = "com.example.demo.Componenta">
+        <property name = "denum" value = "piulite"/>
+        <property name = "culoare" value = "galben"/>
+        <property name = "um" value = "cutie"/>
+    </bean>
+    <bean id = "liv1" class = "com.example.demo.Livrare">
+        <property name="fz" ref="radu" />
+        <property name="cmp" ref="surub" />
+    </bean>
+    <bean id = "liv2" class = "com.example.demo.Livrare">
+        <property name="fz" ref="ion" />
+        <property name="cmp" ref="piulita" />
+    </bean>
 </beans>
